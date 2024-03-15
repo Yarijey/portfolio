@@ -1,0 +1,16 @@
+/* TechnologiesSection.css */
+
+.technologies-section {
+  text-align: center;
+  padding: 50px 10px;
+}
+
+.technologies-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.technologies-subtitle {
+  font-size: 1.2em;
+  color: #555;
+}

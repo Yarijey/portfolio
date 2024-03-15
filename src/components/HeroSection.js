@@ -1,10 +1,12 @@
 
 
+import './HeroSection.css';
+
 function HeroSection() {
   return (
-    <section>
-      <h1>Welcome to My Portfolio</h1>
-      <p>I'm [Your Name], a [Your Profession].</p>
+    <section className="hero-section">
+      <h1 className="hero-title">Welcome to My Portfolio</h1>
+      <p className="hero-subtitle">I'm [Your Name], a [Your Profession].</p>
     </section>
   );
 }

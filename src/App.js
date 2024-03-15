@@ -1,5 +1,10 @@
 import { ReactDOM } from "react-dom/client";
 import './App.css';
+import HeroSection from "./components/HeroSection";
+import AboutMeSection from "./components/AboutMeSection";
+import TechnologiesSection from "./components/TechnologiesSection";
+import ProjectsSection from "./components/ProjectsSection";
+import ContactSection from "./components/ContactSection";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -11,34 +16,19 @@ root.render(
     </nav>
     <main>
       {/* Hero Section */}
-      <section id="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>I'm [Your Name] - [Your Profession]</p>
-      </section>
+      <HeroSection />
 
       {/* About Me Section */}
-      <section id="about">
-        <h2>About Me</h2>
-        <p>Information about yourself</p>
-      </section>
+      <AboutMeSection />
 
       {/* Technologies Section */}
-      <section id="technologies">
-        <h2>Technologies I Use</h2>
-        <p>Details about the technologies you use</p>
-      </section>
+      <TechnologiesSection />
 
       {/* Projects Section */}
-      <section id="projects">
-        <h2>My Projects</h2>
-        <p>Details of your projects</p>
-      </section>
+      <ProjectsSection />
 
       {/* Contact Section */}
-      <footer id="contact">
-        <h2>Contact Me</h2>
-        <p>How people can reach you</p>
-      </footer>
+      <ContactSection />
     </main>
   </>
 );

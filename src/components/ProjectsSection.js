@@ -1,4 +1,4 @@
-
+import './ProjectsSection.css';
 
 function ProjectsSection() {
   return (

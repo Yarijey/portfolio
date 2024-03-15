@@ -1,9 +1,11 @@
 
+import './TechnologiesSection.css';
+
 function TechnologiesSection() {
   return (
-    <section>
-      <h1>Technologies</h1>
-      <p>This, and that .</p>
+    <section className="technologies-section">
+      <h1 className="technologies-title">Technologies</h1>
+      <p className="technologies-subtitle">This, and that .</p>
     </section>
   );
 }

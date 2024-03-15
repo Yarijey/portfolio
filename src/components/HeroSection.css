@@ -1,0 +1,16 @@
+/* HeroSection.css */
+
+.hero-section {
+  text-align: center;
+  padding: 50px 10px;
+}
+
+.hero-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
+  color: #555;
+}
