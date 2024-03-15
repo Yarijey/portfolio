@@ -1,2 +1,3 @@
 # portfolio
-This is my portfolio 
+Hello! 
+Welcome to my portfolio 
