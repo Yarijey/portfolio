@@ -1,0 +1,21 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navigation styles */
+nav {
+  /* Your styles here */
+}
+
+/* Hero section styles */
+.hero {
+  /* Your styles here */
+}
+
+/* Responsive design example */
+@media (max-width: 768px) {
+  .hero {
+    /* Adjust styles for mobile view */
+  }
+}

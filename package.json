@@ -1,0 +1,14 @@
+{
+  "name": "Yarijey-Portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Yarijey/portfolio.git",
+  "author": "yarijeytecher@gmail.com",
+  "license": "MIT",
+  "private": null,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  }
+}
