@@ -1,16 +1,85 @@
 /* HeroSection.css */
-
 .hero-section {
-  text-align: center;
-  padding: 50px 10px;
+  position: relative;
+  background-color: #ff00ff; /* Bold Fuchsia */
+  color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Adjust if necessary */
 }
 
-.hero-title {
-  font-size: 2em;
-  margin-bottom: 20px;
+/* Retaining the navbar styles */
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  transition: background-color 0.3s;
+  background-color: transparent;
 }
 
-.hero-subtitle {
-  font-size: 1.2em;
-  color: #555;
+.navbar.scrolled {
+  background-color: #000; /* Background color when scrolled */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the LinkedIn button */
+.linkedin-button {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* Adjusting hero content styles */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  right: 33%;
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+.hero-content h1 {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.hero-content p {
+  font-weight: 300;
+}
+
+.projects-link {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+/* Styles for the landscape photo */
+.landscape-photo {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 66%;
 }
