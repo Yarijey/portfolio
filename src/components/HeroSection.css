@@ -12,23 +12,25 @@
 /* Retaining the navbar styles */
 .navbar {
   width: 100%;
-  position: absolute;
+  position: absolute; /* Positioned relative to hero section */
   top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
   transition: background-color 0.3s;
-  background-color: transparent;
+  background-color: transparent; /* Ensure navbar is always transparent */
+  z-index: 10; /* Make sure navbar is above other content */
 }
 
 .navbar.scrolled {
   background-color: #000; /* Background color when scrolled */
 }
 
+/* Ensuring text in the navbar is visible */
 .nav-link {
   text-decoration: none;
-  color: inherit;
+  color: black; /* Text color is black */
   padding: 10px;
 }
 
