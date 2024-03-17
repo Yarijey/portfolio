@@ -1,87 +1,59 @@
 /* HeroSection.css */
 .hero-section {
-  position: relative;
-  background-color: #ff00ff; /* Bold Fuchsia */
-  color: black;
+  background-color: #ff00ff; /* Bold Fuchsia, specific to HeroSection */
   padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Adjust if necessary */
+  height: 100vh; /* Full viewport height */
 }
 
-/* Retaining the navbar styles */
-.navbar {
-  width: 100%;
-  position: absolute; /* Positioned relative to hero section */
-  top: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-  transition: background-color 0.3s;
-  background-color: transparent; /* Ensure navbar is always transparent */
-  z-index: 10; /* Make sure navbar is above other content */
-}
+/* Navbar transparency and text color are handled globally, so no need to repeat */
 
-.navbar.scrolled {
-  background-color: #000; /* Background color when scrolled */
-}
-
-/* Ensuring text in the navbar is visible */
-.nav-link {
-  text-decoration: none;
-  color: black; /* Text color is black */
-  padding: 10px;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-/* Styling for the LinkedIn button */
 .linkedin-button {
+  /* Positioning the LinkedIn button */
   position: absolute;
-  top: 70px;
+  top: 70px; /* Adjust based on actual navbar height */
   left: 20px;
-  background-color: white;
-  color: black;
+  background-color: white; /* Button specific background */
+  color: black; /* Text color specific to the button */
   padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
+  border-radius: 20px; /* Rounded corners for the button */
+  text-decoration: none; /* Remove underline from the link */
 }
 
-/* Adjusting hero content styles */
-.hero-content {
+.home-text {
+  /* Positioning for the text container */
   position: absolute;
   top: 50%;
   right: 33%;
-  transform: translateY(-50%);
-  text-align: right;
+  transform: translateY(-50%); /* Center vertically */
+  text-align: right; /* Align text to the right */
 }
 
-.hero-content h1 {
-  font-weight: bold;
-  font-size: 4rem;
-}
-
-.hero-content p {
-  font-weight: 300;
-}
+/* No need to redefine h1 and p styles here as they are globally set */
 
 .projects-link {
+  /* Specific button style within HeroSection */
   display: inline-block;
-  background-color: white;
-  color: black;
+  background-color: transparent; /* Background is transparent by default */
+  color: black; /* Inherits from global but stated for clarity */
   padding: 5px 10px;
-  margin-left: 10px;
-  text-decoration: none;
+  margin-left: 10px; /* Space from text */
+  text-decoration: none; /* Remove underline */
 }
 
-/* Styles for the landscape photo */
+/* Hover effect for the project link button */
+.projects-link:hover {
+  background-color: black; /* Background on hover */
+  color: white; /* Text color on hover */
+}
+
 .landscape-photo {
+  /* Positioning and sizing the landscape photo */
   position: absolute;
   top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 66%;
+  right: 20px; /* Align to the right with space */
+  transform: translateY(-50%); /* Center vertically */
+  width: 66%; /* Taking up 2/3rd of the space */
 }
+

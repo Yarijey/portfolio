@@ -1,4 +1,33 @@
 /* Global styles */
+
+.navbar {
+  width: 100%;
+  position: fixed; /* Fixed at the top */
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  transition: background-color 0.3s;
+  background-color: transparent; /* Transparent background */
+  color: black; /* Black text color */
+  z-index: 1000; /* Ensures navbar is above other content */
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black when scrolled */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit; /* Inherits black color from navbar */
+  padding: 10px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
 h1 {
   font-weight: 800;
   text-transform: uppercase;
