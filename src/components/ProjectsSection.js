@@ -3,7 +3,7 @@ import './ProjectsSection.css'; // Ensure the CSS file is linked
 
 function ProjectsSection({ projectDetails }) {
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <div className="projects-grid">
         {projectDetails.map((project) => (
           <div className="project-card" key={project.title}>

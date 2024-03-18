@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import NavBar from './NavBar';
 import HeroSection from "./components/HeroSection";
 import AboutMeSection from "./components/AboutMeSection";
 import TechnologiesSection from "./components/TechnologiesSection";
@@ -10,24 +11,12 @@ import projectDetails from './data/projectDetails';
 function App() {
   return (
     <>
-      <nav>
-        {/* Navigation links will go here */}
-        Some nav links here
-      </nav>
+      <NavBar /> {/* NavBar is placed here so it renders on top of all pages */}
       <main>
-        {/* Hero Section */}
-        <HeroSection />
-
-        {/* About Me Section */}
+        <HeroSection /> {/* HeroSection is your home page */}
         <AboutMeSection />
-
-        {/* Technologies Section */}
         <TechnologiesSection />
-
-        {/* Projects Section */}
         <ProjectsSection projectDetails={projectDetails} />
-
-        {/* Contact Section */}
         <ContactSection />
       </main>
     </>
@@ -35,4 +24,3 @@ function App() {
 }
 
 export default App;
-

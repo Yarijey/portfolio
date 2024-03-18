@@ -3,7 +3,7 @@ import './TechnologiesSection.css'; // Link to the CSS file for styling
 
 function TechnologiesSection() {
   return (
-    <section className="technologies-section">
+    <section id="technologies" className="technologies-section">
       <div className="design-skills">
         <p>Design Software: Adobe Creative Suite (Photoshop, Illustrator, InDesign), Figma</p>
         <p>Web Design Tools: Adobe XD, Webflow, WordPress</p>
