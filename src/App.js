@@ -1,4 +1,4 @@
-import { ReactDOM } from "react-dom/client";
+import React from 'react';
 import './App.css';
 import HeroSection from "./components/HeroSection";
 import AboutMeSection from "./components/AboutMeSection";
@@ -7,29 +7,32 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import projectDetails from './data/projectDetails';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+function App() {
+  return (
+    <>
+      <nav>
+        {/* Navigation links will go here */}
+        Some nav links here
+      </nav>
+      <main>
+        {/* Hero Section */}
+        <HeroSection />
 
-root.render(
-  <>
-    <nav>
-      {/* Navigation links will go here */}
-      Some nav links here
-    </nav>
-    <main>
-      {/* Hero Section */}
-      <HeroSection />
+        {/* About Me Section */}
+        <AboutMeSection />
 
-      {/* About Me Section */}
-      <AboutMeSection />
+        {/* Technologies Section */}
+        <TechnologiesSection />
 
-      {/* Technologies Section */}
-      <TechnologiesSection />
+        {/* Projects Section */}
+        <ProjectsSection projectDetails={projectDetails} />
 
-      {/* Projects Section */}
-      <ProjectsSection />
+        {/* Contact Section */}
+        <ContactSection />
+      </main>
+    </>
+  );
+}
 
-      {/* Contact Section */}
-      <ContactSection />
-    </main>
-  </>
-);
+export default App;
+
