@@ -1,73 +1,53 @@
-
+// ContactSection.js
 import React, { useState } from 'react';
-import './ContactSection.css';
+import './ContactSection.css'; // Make sure to create and link the CSS file for styling
 
 function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can handle the submission, e.g., sending data to an API or using a service like EmailJS
-    console.log(formData); // For now, we'll just log the data to the console
-    // Reset form data
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Here you would handle the form submission, perhaps using a service like EmailJS or a backend API
+    console.log('Submitted:', { name, email, message });
   };
 
   return (
     <section className="contact-section">
-      <h1>Contact Me</h1>
-      <div className="_form_wrapper">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="formfield"
-          />
-
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="formfield"
-          />
-
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            className="formfield"
-          ></textarea>
-
-          <button type="submit" className="submit-btn">Send</button>
-        </form>
+      <div className="contact-info">
+        <h1>CONTACT</h1>
+        <h2>yarijeytecher@gmail.com</h2>
       </div>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <label htmlFor="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <label htmlFor="email">Your E-mail</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <label htmlFor="message">Your Message</label>
+        <textarea
+          id="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
+
+        <button type="submit">Send</button>
+      </form>
     </section>
   );
 }
 
 export default ContactSection;
+

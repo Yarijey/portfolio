@@ -1,45 +1,66 @@
 /* ContactSection.css */
 .contact-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 20px;
+  background-color: black; /* Updated background color */
+  color: white; /* Updated text color */
 }
 
-._form_wrapper {
+.contact-info {
+  flex-basis: 66.66%;
+}
+
+.contact-form {
+  flex-basis: 33.33%;
+}
+
+/* Form element styles */
+form {
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  padding: 20px;
-  margin: 20px;
-  background-color: white; /* Feel free to change the background color */
 }
 
-.formfield {
-  width: 100%;
-  margin-bottom: 20px;
+form label,
+form input,
+form textarea {
+  margin-bottom: 10px; /* Spacing between form elements */
+  color: white; /* Ensuring label text is also white */
+}
+
+form input,
+form textarea {
+  width: 100%; /* Full width of the form container */
+  padding: 10px; /* Padding inside the inputs and textarea */
+  background-color: #1a1a1a; /* Slightly lighter background for inputs */
+  border: 1px solid #333; /* Border color */
+  color: white; /* Text color for inputs */
+}
+
+form button {
   padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-label {
-  margin-bottom: 5px;
-  display: block;
-}
-
-.submit-btn {
-  background-color: #0a0a0a;
-  color: white;
-  padding: 10px 20px;
+  background-color: white;
+  color: black;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-.submit-btn:hover {
-  background-color: #ec704c;
+form button:hover {
+  background-color: #f2f2f2; /* Light grey background on hover */
+  color: black; /* Text color on hover */
 }
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    flex-basis: 100%;
+  }
+}
+
+
