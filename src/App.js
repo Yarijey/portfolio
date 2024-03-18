@@ -5,6 +5,7 @@ import AboutMeSection from "./components/AboutMeSection";
 import TechnologiesSection from "./components/TechnologiesSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
+import projectDetails from './data/projectDetails';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

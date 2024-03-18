@@ -1,26 +1,40 @@
 /* ProjectsSection.css */
-/* Style for the section container */
-section {
+.projects-section {
+  background-color: yellow; /* Section background color */
   padding: 20px;
-  background-color: #f5f5f5; /* Example background color */
 }
 
-/* Style for the section header */
-section h1 {
-  color: #333; /* Example text color */
-  margin-bottom: 20px; /* Spacing below the header */
+.projects-title {
+  text-align: right;
+  margin-right: 20px;
+  grid-area: title;
 }
 
-/* Style for the grid container */
-.div {
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
-/* Responsive design adjustments for the grid */
-@media (max-width: 768px) {
-  .div {
-    grid-template-columns: 1fr; /* Stack items in a single column on smaller screens */
-  }
+.project-card {
+  position: relative;
+  margin-bottom: 20px; /* Space below each card */
 }
+
+.project-image {
+  width: 100%;
+  display: block;
+}
+
+.project-title {
+  position: absolute;
+  bottom: 10px; /* Space from the bottom of the image */
+  left: 10px; /* Space from the left side of the image */
+  color: black; /* Initial color of the title */
+  margin: 0; /* Removes default margin */
+}
+
+.project-title:hover {
+  color: #FFDD00; /* Title color changes on hover */
+}
+

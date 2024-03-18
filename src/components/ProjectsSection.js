@@ -1,29 +1,23 @@
-import './ProjectsSection.css';
+import React from 'react';
+import './ProjectsSection.css'; // Ensure the CSS file is linked
 
-function ProjectsSection() {
+function ProjectsSection({ projectDetails }) {
   return (
-    <section>
-    <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold">
-      Projects
-    </h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10">
-      {React.Children.toArray(
-        projectDetails.map(
-          ({ title, image, description, techstack, previewLink, githubLink }) => (
-            <Project
-              title={title}
-              image={image}
-              description={description}
-              techstack={techstack}
-              previewLink={previewLink}
-              githubLink={githubLink}
-            />
-          )
-        )
-      )}
-    </div>
-  </section>
+    <section className="projects-section">
+      <div className="projects-grid">
+        {projectDetails.map((project) => (
+          <div className="project-card" key={project.title}>
+            <img src={project.image} alt={project.title} className="project-image" />
+            <h2 className="project-title">{project.title}</h2>
+            <p>{project.description}</p>
+            <p>{project.techstack}</p>
+            <a href={project.previewLink}>View Project</a>
+            <a href={project.githubLink}>GitHub</a>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
-export default ProjectsSectionSection;
+export default ProjectsSection;
