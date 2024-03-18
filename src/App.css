@@ -1,5 +1,17 @@
 /* Global styles */
 
+/* Apply consistent margin and padding to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+body {
+  font-family: 'Work Sans', sans-serif; /* Primary font for the website */
+}
+
+/* Navbar Styles */
 .navbar {
   width: 100%;
   position: fixed; /* Fixed at the top */
@@ -28,25 +40,33 @@
   text-decoration: underline;
 }
 
+/* Text Elements Styling */
 h1 {
   font-weight: 800;
   text-transform: uppercase;
   color: black;
-  font-size: 2.5rem; /* Example: scales based on the body font-size */
+  font-size: 2.5rem; /* Scales based on the body font-size */
+  margin-bottom: 1rem; /* Consistent bottom margin */
+  text-align: left; /* Aligns text to the left */
 }
 
 h2 {
   font-weight: 500;
   color: black;
   font-size: 2rem;
+  margin-bottom: 1rem; /* Consistent bottom margin */
+  text-align: left; /* Aligns text to the left */
 }
 
 p {
   font-weight: 300;
   color: black;
   font-size: 1rem;
+  margin-bottom: 1rem; /* Consistent bottom margin */
+  text-align: left; /* Aligns text to the left */
 }
 
+/* Button Styling */
 button {
   font-family: 'Work Sans', sans-serif;
   background-color: transparent;
@@ -60,6 +80,17 @@ button {
 button:hover {
   background-color: black;
   color: white;
+}
+
+/* 3-column grid layout for sections */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+  gap: 1rem; /* Space between columns */
+}
+
+.span-2-columns {
+  grid-column: span 2; /* Spans across two columns */
 }
 
 /* Responsive design adjustments */
@@ -81,10 +112,12 @@ button:hover {
     font-size: 0.875rem;
   }
 
-  /* Adjust layout for sections, using percentages for widths/margins */
-  .hero-section, .about-section, .projects-section, .contact-section {
-    padding: 5%; /* Example: More padding for smaller screens */
+  /* Adjust layout for sections in smaller screens */
+  .container {
+    grid-template-columns: 1fr; /* Stacks content in a single column on smaller screens */
   }
 
-  /* Adjust other elements' sizes and spacing as needed */
+  .hero-section, .about-section, .projects-section, .contact-section {
+    padding: 5%; /* More padding for smaller screens */
+  }
 }

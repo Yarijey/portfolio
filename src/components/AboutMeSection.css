@@ -1,0 +1,23 @@
+/* AboutMeSection.css */
+.about-me-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+  gap: 20px; /* Space between columns */
+  padding: 20px; /* Consistent padding with other sections */
+}
+
+.about-title {
+  grid-column: 1 / 2; /* Occupies the first column */
+}
+
+.about-content {
+  grid-column: 2 / 4; /* Spans the second and third columns */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+}
+
+.projects-button {
+  align-self: start; /* Aligns the button to the top of its container */
+  margin-top: 20px; /* Provides space above the button */
+}
