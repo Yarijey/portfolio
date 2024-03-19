@@ -18,7 +18,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <header id="home" className="hero-section"> {/* Refers to .hero-section in CSS for styling */}
+    <header id="home" className="hero-section section"> {/* Refers to .hero-section in CSS for styling */}
 
       {/* Section for large text and a link to the projects section */}
       <div className="home-text">

@@ -1,40 +1,79 @@
-/* ProjectsSection.css */
+/* Apply a flex layout to the projects section container */
 .projects-section {
-  background-color: yellow; /* Section background color */
-  padding: 20px;
+  display: flex;
+  background-color: rgb(255, 255, 0);
+  flex-direction: row; /* Align children (grid and title) in a row */
+  align-items: stretch; /* Stretch children to fill the container height */
+  padding: 20px; /* Padding around the content */
 }
 
-.projects-title {
-  text-align: right;
-  margin-right: 20px;
-  grid-area: title;
+/* Set the title container to take 1/3 of the space */
+.projects-section h1 {
+  width: 33.333%; /* Take up 1/3 of the space */
+  display: flex; /* Use flexbox to layout "PRO" over "JECTS" */
+  flex-direction: column; /* Stack "PRO" and "JECTS" vertically */
+  align-items: top; /* Center the text horizontally */
+  justify-content: top; /* Center the text vertically */
+  font-size: 5vw; /* Responsive font size based on viewport width */
+  position: relative; /* Positioning context for absolute children */
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
+/* Ensure the grid takes the remaining 2/3 of the space and accounts for the gap */
 .projects-grid {
+  flex-grow: 2; /* Allow the grid to grow and take up 2/3 of the space */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Two images per row */
+  gap: 20px; /* Space between grid items */
 }
 
 .project-card {
   position: relative;
-  margin-bottom: 20px; /* Space below each card */
+  background-color: transparent; /* No background to match the transparent style */
 }
 
 .project-image {
   width: 100%;
-  display: block;
+  display: block; /* Images are block-level to take up the entire width */
 }
 
 .project-title {
-  position: absolute;
-  bottom: 10px; /* Space from the bottom of the image */
-  left: 10px; /* Space from the left side of the image */
-  color: black; /* Initial color of the title */
-  margin: 0; /* Removes default margin */
+  position: absolute; /* Position title over the image */
+  font-weight: 600;
+  left: 10px; /* Slight margin from the left side of the image */
+  color: white; /* Choose a text color that stands out over your images */
+  padding: 5px; /* Small padding around the text */
 }
 
-.project-title:hover {
-  color: #FFDD00; /* Title color changes on hover */
+.project-description,
+.project-techstack,
+.project-links a {
+  color: black; /* Text color */
+  padding: 0.5rem 0; /* Padding on top and bottom */
+  text-align: left; /* Align text to the left */
+  font-family: 'Work Sans', sans-serif;
 }
 
+.project-links a {
+  display: block; /* Links display as block to stack vertically */
+}
+
+/* Ensure the card content container does not extend beyond the width of the image */
+.project-content {
+  width: calc(100% - 20px); /* Subtract any horizontal padding you may have */
+  margin: 0 10px; /* Same horizontal margin as the project-title */
+}
+/* Add other styles here... */
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-grow: 1; /* Grid takes full width on smaller screens */
+  }
+
+  .projects-title {
+    width: 100%; /* Full width for smaller screens */
+    font-size: 8vw; /* Larger font size for visibility on small screens */
+  }
+}

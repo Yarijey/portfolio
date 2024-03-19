@@ -7,6 +7,17 @@
   box-sizing: border-box; /* Ensures padding doesn't affect overall width */
 }
 
+.section {
+  padding: 4rem 0; /* Adds vertical padding to the top and bottom */
+  margin: 2rem 0; /* Adds vertical margin to the top and bottom */
+}
+
+.section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
   font-family: 'Work Sans', sans-serif; /* Primary font for the website */
 }
@@ -25,8 +36,6 @@ h2 {
   font-weight: 500;
   color: black;
   font-size: 2rem;
-  margin-bottom: 1rem; /* Consistent bottom margin */
-  text-align: left; /* Aligns text to the left */
 }
 
 p {
@@ -92,3 +101,9 @@ button:hover {
     padding: 5%; /* More padding for smaller screens */
   }
 }
+
+.section {
+  padding: 2rem 0; /* Adjust padding for smaller screens */
+  margin: 1rem 0; /* Adjust margin for smaller screens */
+}
+

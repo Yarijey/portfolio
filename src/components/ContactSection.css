@@ -8,18 +8,31 @@
   color: white; /* Updated text color */
 }
 
+.contact-section h1 {
+  color: white;
+  padding-left: 20px;
+  font-size: 6em;
+}
+
+.contact-section h2 {
+  color: white;
+  padding-left: 20px;
+  font-size: 3em;
+  font-weight: 300;
+}
 .contact-info {
-  flex-basis: 66.66%;
+  flex-basis: 50%;
 }
 
 .contact-form {
-  flex-basis: 33.33%;
+  flex-basis: 40%;
 }
 
 /* Form element styles */
 form {
   display: flex;
   flex-direction: column;
+  padding-left: 40px;
 }
 
 form label,

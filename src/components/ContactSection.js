@@ -1,6 +1,6 @@
 // ContactSection.js
 import React, { useState } from 'react';
-import './ContactSection.css'; // Make sure to create and link the CSS file for styling
+import './ContactSection.css'; 
 
 function ContactSection() {
   const [name, setName] = useState('');
@@ -9,12 +9,12 @@ function ContactSection() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Here you would handle the form submission, perhaps using a service like EmailJS or a backend API
+  // form submission, perhaps EmailJS or a backend API
     console.log('Submitted:', { name, email, message });
   };
 
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className="contact-section section">
       <div className="contact-info">
         <h1>CONTACT</h1>
         <h2>yarijeytecher@gmail.com</h2>
