@@ -1,11 +1,5 @@
 /* NavBar.css - This file contains the styles for the navigation bar. */
 
-/* Reset some default styles */
-/* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
 
 /* Styles for the navigation bar that sticks to the top of the page */
 .navbar {
@@ -23,18 +17,18 @@
   z-index: 10; /* High z-index to ensure navbar stays above other content */
 }
 
-/* Additional style when the navbar is scrolled */
+/* style when the navbar is scrolled */
 .navbar.scrolled {
-  background-color: #ffd9fd; /* Light grey background when scrolled */
+  background-color: #ffd9fd; 
 }
 
-/* Style for the brand name or logo on the left side */
+/* Style for name on the left side */
 .navbar h1 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 36px; /* Font size for the brand name */
-  font-weight: 800; /* Bold font weight */
+  font-size: 36px; 
+  font-weight: 800; 
   padding-top: 35px;
-  color: #000000; /* Black color text for contrast */
+  color: #000000; 
 }
 
 /* Container for the navigation menu items */
@@ -45,7 +39,7 @@
 /* General styles for each navigation item/link */
 .nav-item {
   text-decoration: none; /* Removes underline from links */
-  color: #000000; /* Black color for the text */
+  color: #000000;
   font-family: 'Work Sans', sans-serif;
   font-size: 18px; /* Size of the nav item text */
   font-weight: 400; /* Normal weight for text */
@@ -56,7 +50,7 @@
 
 }
 
-  /* Transparent bottom border for a hover effect */
+
 .nav-item {
   transition: border-color 0.3s; /* Transition for the border color change on hover */
 }
@@ -66,18 +60,18 @@
   border-bottom: 1px solid #000000; /* Black border on hover for visibility */
 }
 
-/* Styles for the LinkedIn button to make it stand out */
+/* Styles for the LinkedIn button to stand out */
 .special {
-  background-color: rgb(255, 255, 0); /* Yellow background for LinkedIn button */
-  padding: 10px 15px; /* Padding around the text */
-  border-radius: 50px; /* Rounded corners for the button */
-  transition: all 0.3s; /* Smooth transition for hover effects */
+  background-color: rgb(255, 255, 0); 
+  padding: 10px 15px; 
+  border-radius: 50px; 
+  transition: all 0.3s; 
 }
 
 /* Hover effect for the LinkedIn button */
 .special:hover {
-  background-color: #ff00ff; /* Slightly different shade on hover */
-  color: #000000; /* Change text color on hover if needed */
+  background-color: #ff00ff; 
+  color: #000000; 
 }
 
 /* Responsive adjustments for smaller screens */

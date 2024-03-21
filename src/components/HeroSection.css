@@ -1,18 +1,18 @@
 /* HeroSection.css */
 .hero-section {
   background-color: #ff00ff;
-  display: flex; /* Switching to flex to facilitate horizontal layout */
+  display: flex; /*  flex to facilitate horizontal layout */
   flex-direction: row; /* Align children horizontally */
   align-items: center; /* Vertically center the content */
-  justify-content: space-between; /* Space out the child elements, if needed */
+  justify-content: space-between; /* Space out the child elements
   height: 100vh;
-  padding-left: 20px; /* Padding on the left to ensure content is not flush against the screen edge */
+  padding-left: 20px; /* Padding on the left */
   padding-right: 20px; /* Same for the right */
 }
 
 .hero-section h1 {
   font-family: 'Work Sans', sans-serif;
-  font-size: 400px; /* Adjust font size if needed to fit the image height */
+  font-size: 400px; 
   letter-spacing: 2.5rem;
   line-height: 18.5rem;
   font-weight: 800; /* Bold font weight */
@@ -27,24 +27,16 @@ font-size: 39px;
 padding-left: 22px;
 }
 
-/* Assuming the LinkedIn button is part of the hero section and should be positioned absolutely within it */
-.linkedin-button {
-  position: absolute;
-  top: 70px;
-  right: 20px; /* Adjust to match the design, assuming it's on the right */
-}
-
 .home-text {
-  flex: 0 0 auto; /* Don't grow, don't shrink, based on content width */
+  flex: 0 0 auto; /* Don't grow, don't shrink */
   padding-right: 20px; /* Space between text and image */
 }
 
 .landscape-photo {
-  flex: 0 0 auto; /* Don't grow, don't shrink, based on content width */
-  max-height: calc(11.5rem + 500px); /* Image height matches h1 plus its top and bottom padding */
-  object-fit: cover; /* Cover the area without stretching */
-  margin-right: 20px; /* Ensure there's a gap between the text and the image */
-}
+  flex: 0 0 auto; 
+  max-height: calc(11.5rem + 500px); 
+  object-fit: cover; 
+  margin-right: 20px; }
 
 
 

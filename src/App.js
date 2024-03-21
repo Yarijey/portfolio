@@ -11,9 +11,9 @@ import projectDetails from './data/projectDetails';
 function App() {
   return (
     <>
-      <NavBar /> {/* NavBar is placed here so it renders on top of all pages */}
+      <NavBar /> {/* NavBar is placed here on top of all pages */}
       <main>
-        <HeroSection /> {/* HeroSection is your home page */}
+        <HeroSection /> {/* HeroSection is the home page */}
         <AboutMeSection />
         <TechnologiesSection />
         <ProjectsSection projectDetails={projectDetails} />

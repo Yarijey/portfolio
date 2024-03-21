@@ -1,5 +1,5 @@
 import React from 'react';
-import './TechnologiesSection.css'; // Link to the CSS file for styling
+import './TechnologiesSection.css'; 
 
 function TechnologiesSection() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './HeroSection.css'; // Linking CSS to this JS file.
+import './HeroSection.css'; 
 import heroImage from '../assets/heroImage.jpg';
 
 function HeroSection() {
@@ -10,7 +10,7 @@ function HeroSection() {
       setIsScrolled(window.scrollY > 50); // Changes navbar state based on scroll position.
     };
 
-    window.addEventListener('scroll', handleScroll); // Adds an event listener for scroll.
+    window.addEventListener('scroll', handleScroll); // event listener for scroll.
 
     return () => {
       window.removeEventListener('scroll', handleScroll); // Cleans up the event listener.
@@ -18,12 +18,12 @@ function HeroSection() {
   }, []);
 
   return (
-    <header id="home" className="hero-section section"> {/* Refers to .hero-section in CSS for styling */}
+    <header id="home" className="hero-section section"> 
 
-      {/* Section for large text and a link to the projects section */}
+      
       <div className="home-text">
-        <h1>HO<br/>ME</h1> {/* Uses global h1 styles */}
-        <p>Welcome to my portfolio - <a href="#projects" className="projects-link">Projects </a></p> {/* Uses global p and .projects-link styles */}
+        <h1>HO<br/>ME</h1> 
+        <p>Welcome to my portfolio - <a href="#projects" className="projects-link">Projects </a></p> 
       </div>
 
       {/* Image with specific positioning */}
